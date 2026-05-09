@@ -7,6 +7,10 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('School Management API Running');
+});
+
 // Routes
 app.use('/api', schoolRoutes);
 
